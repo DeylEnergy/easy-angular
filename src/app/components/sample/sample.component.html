@@ -26,3 +26,13 @@
   <li *ngSwitchCase="'raspberry'">Raspberry is tops when you're feeling cold.</li>
   <li *ngSwitchDefault>The fruit doesn't exist in this variable.</li>
 </ul>
+
+<h2>Binding</h2>
+<div><img src="{{ imageUrl }}"></div>
+<div><img [src]="imageUrl"></div>
+<div><img bind-src="imageUrl"></div>
+<h3>Property binding</h3>
+<p [innerHTML]="imageUrl"></p>
+<h3>One more example</h3>
+<p [hidden]="isHidden"></p>
+<button [disabled]="isHidden">Super Functional Button</button>

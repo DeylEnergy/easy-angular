@@ -3,7 +3,8 @@ import { Article } from './Post'
 
 @Component ({
   selector: 'sample',
-  templateUrl: './sample.component.html'
+  templateUrl: './sample.component.html',
+  styleUrls: ['./sample.component.css']
 })
 export class SampleComponent {
   action:string = 'working';
@@ -52,5 +53,9 @@ export class SampleComponent {
   ];
 
   // for ngSwitch
-fruit = 'raspberry';
+  fruit = 'raspberry';
+
+  // for binding
+  imageUrl = 'https://loremflickr.com/320/240';
+  isHidden:boolean =  true;
 }
