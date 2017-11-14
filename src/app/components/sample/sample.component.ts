@@ -75,4 +75,7 @@ export class SampleComponent {
     'color': 'white',
     'padding': '.3rem'
   };
+
+  // pipes
+  today = new Date(); 
 }
