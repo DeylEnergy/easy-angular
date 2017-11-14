@@ -1,4 +1,8 @@
 .emphasize {
   background: green;
+  color: #fff;
   padding: .5rem;
+}
+.capital {
+  text-transform: uppercase;
 }

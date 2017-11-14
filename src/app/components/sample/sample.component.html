@@ -36,3 +36,11 @@
 <h3>One more example</h3>
 <p [hidden]="isHidden"></p>
 <button [disabled]="isHidden">Super Functional Button</button>
+
+<h2>Class binding & ngClass</h2>
+<p>Learning should be intersting then you
+  <span [class.emphasize]="isHasBackground">master</span> that.
+</p>
+<p>Programming isn't easy but you'll become an expert if you
+  <span [ngClass]="importantWord">work</span> hard.
+</p>

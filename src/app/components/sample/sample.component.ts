@@ -58,4 +58,12 @@ export class SampleComponent {
   // for binding
   imageUrl = 'https://loremflickr.com/320/240';
   isHidden:boolean =  true;
+
+  // for class binding
+  isHasBackground = true;
+  isCapital = true;
+  importantWord = {
+    emphasize: this.isHasBackground,
+    capital: this.isCapital
+  };
 }
