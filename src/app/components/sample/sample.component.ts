@@ -66,4 +66,13 @@ export class SampleComponent {
     emphasize: this.isHasBackground,
     capital: this.isCapital
   };
+
+  // for style binding
+  isColorAvailable = true;
+  bigAndColored = {
+    'background': 'blue',
+    'text-transform': 'uppercase',
+    'color': 'white',
+    'padding': '.3rem'
+  };
 }

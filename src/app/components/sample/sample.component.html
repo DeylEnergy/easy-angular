@@ -44,3 +44,14 @@
 <p>Programming isn't easy but you'll become an expert if you
   <span [ngClass]="importantWord">work</span> hard.
 </p>
+
+<h2>Styles binding & ngStyle</h2>
+  <p>Lorem ipsum dolor sit
+    <span [style.color]="isColorAvailable ? 'green' : 'black'">amet</span>,
+    consectetur adipisicing elit.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet,
+    <span [ngStyle]="bigAndColored">consectetur</span> 
+    adipisicing elit
+  </p>
