@@ -38,4 +38,19 @@ export class SampleComponent {
       lastName: 'Armstrong'
     }
   ];
+
+  // for ngIf
+  countries = {
+    US: 'Washington',
+    Canada: 'Ottawa',
+    Australia: 'Canberra'
+  };
+  cities = [
+    'New York', 'Los Angeles', 'Toronto',
+    'Edmonton', 'Sidney', 'Queensland',
+    'Canberra'
+  ];
+
+  // for ngSwitch
+fruit = 'raspberry';
 }

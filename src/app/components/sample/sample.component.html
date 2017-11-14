@@ -4,3 +4,25 @@
     <b>{{ i + 1 }}</b>. {{person.firstName}} {{ person.lastName }}
   </li>
 </ul>
+
+<h2>ngIf</h2>
+<p>{{ cities[0] }} is the capital of the US? -
+  <span *ngIf="countries.US === cities[0]; then correct else incorrect"></span>
+</p>
+<p>
+  {{ cities[2] }} is the capital of Canada? -
+  <span *ngIf="countries.Canada === cities[2]; then correct else incorrect"></span>
+</p>
+<p>
+  {{ cities[6] }} is the capital of Australia? -
+  <span *ngIf="countries.Australia === cities[6]; then correct else incorrect"></span>
+</p>
+<ng-template #correct>Yes, it is.</ng-template>
+<ng-template #incorrect>No, it isn't</ng-template>
+
+<h2>ngSwitch</h2>
+<ul [ngSwitch]="fruit">
+  <li *ngSwitchCase="'banana'">Banana is yellow. Really helps when you're hungry.</li>
+  <li *ngSwitchCase="'raspberry'">Raspberry is tops when you're feeling cold.</li>
+  <li *ngSwitchDefault>The fruit doesn't exist in this variable.</li>
+</ul>
