@@ -25,4 +25,16 @@ export class  EventsFormsComponent {
   toggleFrame(){
     this.frameStatus = !this.frameStatus;
   }
+
+  // keyboard & input events
+  inputEventAction = 'You did not invoke any action yet.';
+  showInputAction(e){
+    this.inputEventAction = e;
+  }
+
+  // mirror action
+  mirrorText = '';
+  mirrorAction(value){
+    this.mirrorText = value;
+  }
 }
