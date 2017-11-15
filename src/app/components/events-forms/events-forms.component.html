@@ -1,0 +1,11 @@
+<h2>Mouse Events</h2>
+<h3>Click event</h3>
+<div [ngClass]="theFrame">
+  {{ theAction }}
+</div>
+<br>
+<button (click)="somethingHappened($event.type)">Click this</button>
+<button (mouseover)="somethingHappened($event.type)">Mouseover</button>
+<button (mouseup)="somethingHappened($event.type)">Mouseup</button>
+<button (mousedown)="somethingHappened($event.type)">Mousedown</button>
+<button (dblclick)="somethingHappened($event.type)">Double Click</button>

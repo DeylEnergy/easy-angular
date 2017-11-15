@@ -1,0 +1,5 @@
+.borderedframe {
+  border: 1px solid green;
+  padding: 1rem;
+  width: 15rem;
+}
