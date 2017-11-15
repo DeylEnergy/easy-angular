@@ -1,5 +1,5 @@
-<h2>Mouse Events</h2>
-<h3>Click event</h3>
+<h2>Events</h2>
+<h3>Mouse events</h3>
 <div [ngClass]="theFrame">
   {{ theAction }}
 </div>
@@ -9,3 +9,11 @@
 <button (mouseup)="somethingHappened($event.type)">Mouseup</button>
 <button (mousedown)="somethingHappened($event.type)">Mousedown</button>
 <button (dblclick)="somethingHappened($event.type)">Double Click</button>
+
+<h3>Changing Properties With Events</h3>
+<div *ngIf="frameStatus" [ngClass]="theFrame">
+  {{ theFrameText }}
+</div>
+<br>
+<button (click)="changeTheFrameText()">Change text</button>
+<button (click)="toggleFrame()">Toggle the block</button>

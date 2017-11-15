@@ -15,4 +15,14 @@ export class  EventsFormsComponent {
   somethingHappened(e){
     this.theAction = e;
   }
+
+  // changing properties
+  theFrameText = 'This text will be changed';
+  changeTheFrameText(){
+    this.theFrameText = 'The text changed';
+  }
+  frameStatus = true;
+  toggleFrame(){
+    this.frameStatus = !this.frameStatus;
+  }
 }
