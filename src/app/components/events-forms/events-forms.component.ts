@@ -37,4 +37,28 @@ export class  EventsFormsComponent {
   mirrorAction(value){
     this.mirrorText = value;
   }
+
+  name= '';
+  age = 0;
+  // users
+  users = [
+    {
+      name: 'Derek',
+      age: 20
+    },
+    {
+      name: 'Anne',
+      age: 21
+    },
+    {
+      name: 'Kate',
+      age: 25
+    }
+  ];
+  pushIntoUsers(){
+    this.users.push({
+      name: this.name,
+      age: this.age
+    });
+  }
 }

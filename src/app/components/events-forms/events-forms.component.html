@@ -40,7 +40,7 @@
 </div>
 
 <h3>ngModel & 2 Way Data Binding</h3>
-<form>
+<form (submit)="pushIntoUsers()">
   <input type="text" [(ngModel)]="name" name="name" placeholder="Your Name">
   <br><br>
   <input type="number" [(ngModel)]="age" name="age" placeholder="Your Age">
@@ -49,3 +49,11 @@
 </form>
 <div class="block"><b>Name:</b> {{ name }}</div>
 <div class="block"><b>Age:</b> {{ age }}</div>
+
+<div [ngClass]="theFrame">
+  <ul>
+    <li *ngFor="let user of users">
+    {{ user.name }} {{ user.age }}
+    </li>
+  </ul>
+</div>
