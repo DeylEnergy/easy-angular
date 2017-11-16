@@ -38,3 +38,14 @@
 <div [ngClass]="theFrame">
   {{ mirrorText }}
 </div>
+
+<h3>ngModel & 2 Way Data Binding</h3>
+<form>
+  <input type="text" [(ngModel)]="name" name="name" placeholder="Your Name">
+  <br><br>
+  <input type="number" [(ngModel)]="age" name="age" placeholder="Your Age">
+  <br><br>
+  <input type="submit" value="Send">
+</form>
+<div class="block"><b>Name:</b> {{ name }}</div>
+<div class="block"><b>Age:</b> {{ age }}</div>
