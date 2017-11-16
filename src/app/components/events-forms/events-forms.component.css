@@ -7,3 +7,6 @@
 .block {
   margin-top: 1rem;
 }
+.invalid-value {
+  color: red;
+}

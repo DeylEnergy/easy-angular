@@ -61,4 +61,23 @@ export class  EventsFormsComponent {
       age: this.age
     });
   }
+
+  submitButtonIsHidden = true;
+  people = {
+    name: '',
+    email : '',
+    phone: ''
+  };
+  clients = [
+    {name: 'Deyl', email: 'deyl@gmail.com', phone: 1234567891},
+    {name: 'Daniela', email: 'daniela@gmail.com', phone: 1234567891}
+  ];
+  onSubmit({value, valid}){
+    if (valid){
+      this.clients.push(value);
+    }
+  }
+  changeButtonValue(){
+    this.submitButtonIsHidden = false;
+  }
 }

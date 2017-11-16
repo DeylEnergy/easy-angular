@@ -57,3 +57,69 @@
     </li>
   </ul>
 </div>
+
+<h3>Template Driven Forms & Validation</h3>
+<form novalidate #f="ngForm" (ngSubmit)="onSubmit(f)">
+  <div class="block">
+    <input
+      type="text"
+      placeholder="Your name"
+      name="name"
+      [(ngModel)]="people.name"
+      #userName="ngModel"
+      required
+      minlength="2"
+    >
+    <div class="invalid-value"
+      *ngIf="userName.errors?.minlength && userName.touched"
+    >
+      Name should be at least 2 characters
+    </div>
+  </div>
+  <div class="block">
+    <input
+    type="text"
+    placeholder="Email"
+    name="email"
+    [(ngModel)]="people.email"
+    #userEmail="ngModel"
+    required
+    email
+    >
+    <div class="invalid-value"
+      *ngIf="userEmail.errors?.email && userEmail.touched"
+    >
+      Email isn't correct
+    </div>
+  </div>
+  <div class="block">
+    <input
+      type="text"
+      placeholder="phone"
+      name="phone"
+      [(ngModel)]="people.phone"
+      #userPhone="ngModel"
+      minlength="10"
+    >
+    <div class="invalid-value"
+      *ngIf="userPhone.errors?.minlength && userPhone.touched">
+      incorrect
+    </div>
+  </div>
+  <ng-template
+    [ngIf]="
+      !userName.errors && userName.touched &&
+      !userEmail.errors && userEmail.touched &&
+      !userPhone.errors && userPhone.touched
+  ">
+    {{ changeButtonValue() }}
+  </ng-template>
+  <div class="block">
+    <input [disabled]="submitButtonIsHidden" type="submit" value="Send the data">
+  </div>
+</form>
+<ul [ngClass]="theFrame">
+  <li *ngFor="let client of clients">
+    {{ client.name }} :: {{ client.email }} :: {{ client.phone }}
+  </li>
+</ul>
