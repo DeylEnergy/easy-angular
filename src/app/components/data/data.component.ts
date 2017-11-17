@@ -6,7 +6,11 @@ import { UserService } from '../../services/users/users.service';
   templateUrl: './data.component.html'
 })
 export class DataComponent{
+  data:any[] = [];
   constructor (public users:UserService){
+    this.users.getFeedback().subscribe(data => {
+      this.data.push(data);
+    });
   }
   stuff = this.users.returnUsers();
 }
