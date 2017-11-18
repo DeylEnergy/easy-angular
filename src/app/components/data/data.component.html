@@ -19,3 +19,29 @@
     <b>Email:</b> {{ user.email }};
   </li>
 </ul>
+
+<h2>Add a user. POST Request</h2>
+<form (submit)="insertUser()">
+  <input
+    type="text"
+    [(ngModel)]="person.nickname"
+    name="name"
+    placeholder="Username"
+  >
+  <br><br>
+  <input
+    type="text"
+    [(ngModel)]="person.email"
+    name="email"
+    placeholder="Email"
+    >
+  <br><br>
+  <input
+    type="text"
+    [(ngModel)]="person.phone"
+    name="phone"
+    placeholder="Phone number"
+  >
+  <br><br>
+  <input type="submit" value="Submit">
+</form>

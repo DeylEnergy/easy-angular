@@ -16,7 +16,17 @@ export class DataComponent{
     this.fakeUsers.getUsers().subscribe(res => {
       this.bunchOfUsers = res;
     });
-
   }
   stuff = this.users.returnUsers();
+
+  person = {
+    name: '',
+    email: '',
+    phone: ''
+  };
+  insertUser(){
+    this.fakeUsers.addUser(this.person).subscribe(res => {
+      console.log(res);
+    });
+  }
 }
