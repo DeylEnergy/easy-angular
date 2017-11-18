@@ -19,16 +19,25 @@ export class DataComponent{
   }
   stuff = this.users.returnUsers();
 
-  person = {
+  user = {
+    id: '',
     username: '',
     email: '',
     phone: ''
   };
-  insertUser(){
-    this.fakeUsers.addUser(this.person).subscribe(res => {
-      this.bunchOfUsers.unshift(this.person);
-      alert('User was added');
-    });
+  isEdit:boolean = false;
+  pushUser(){
+    if (this.isEdit){
+      this.fakeUsers.updateUser(this.user).subscribe(res => {
+        console.log(res);
+        alert(`${this.user.username} was updated`);
+      });
+    } else {
+      this.fakeUsers.addUser(this.user).subscribe(res => {
+        this.bunchOfUsers.unshift(this.user);
+        alert('User was added');
+      });
+    }
   }
 
   removeUser(userId){
@@ -40,5 +49,10 @@ export class DataComponent{
       }
       alert(`User was deleted`);
     });
+  }
+
+  editUser(user){
+    this.isEdit = true;
+    this.user = user;
   }
 }

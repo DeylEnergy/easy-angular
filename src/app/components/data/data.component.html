@@ -17,29 +17,30 @@
   <li *ngFor="let user of bunchOfUsers">
     <b>User:</b> {{ user.username }} ::
     <b>Email:</b> {{ user.email }};
+    <u (click)="editUser(user)">Edit</u>
     <u (click)="removeUser(user.id)">Delete</u>
   </li>
 </ul>
 
-<h2>Add a user. POST Request</h2>
-<form (submit)="insertUser()">
+<h2>Add/Edit a user. POST Request</h2>
+<form (submit)="pushUser()">
   <input
     type="text"
-    [(ngModel)]="person.username"
+    [(ngModel)]="user.username"
     name="name"
     placeholder="Username"
   >
   <br><br>
   <input
     type="text"
-    [(ngModel)]="person.email"
+    [(ngModel)]="user.email"
     name="email"
     placeholder="Email"
     >
   <br><br>
   <input
     type="text"
-    [(ngModel)]="person.phone"
+    [(ngModel)]="user.phone"
     name="phone"
     placeholder="Phone number"
   >
