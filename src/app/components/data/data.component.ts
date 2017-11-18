@@ -20,13 +20,25 @@ export class DataComponent{
   stuff = this.users.returnUsers();
 
   person = {
-    name: '',
+    username: '',
     email: '',
     phone: ''
   };
   insertUser(){
     this.fakeUsers.addUser(this.person).subscribe(res => {
-      console.log(res);
+      this.bunchOfUsers.unshift(this.person);
+      alert('User was added');
+    });
+  }
+
+  removeUser(userId){
+    this.fakeUsers.deleteUser(userId).subscribe(res => {
+      for (let i = 0; i < this.bunchOfUsers.length; i++){
+        if (this.bunchOfUsers[i].id == userId){
+          this.bunchOfUsers.splice(i, 1);
+        }
+      }
+      alert(`User was deleted`);
     });
   }
 }

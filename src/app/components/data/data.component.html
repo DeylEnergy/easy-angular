@@ -17,6 +17,7 @@
   <li *ngFor="let user of bunchOfUsers">
     <b>User:</b> {{ user.username }} ::
     <b>Email:</b> {{ user.email }};
+    <u (click)="removeUser(user.id)">Delete</u>
   </li>
 </ul>
 
@@ -24,7 +25,7 @@
 <form (submit)="insertUser()">
   <input
     type="text"
-    [(ngModel)]="person.nickname"
+    [(ngModel)]="person.username"
     name="name"
     placeholder="Username"
   >
