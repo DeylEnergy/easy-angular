@@ -6,7 +6,6 @@ import 'rxjs/add/operator/map';
 
 export class FakeUsersService {
   constructor(public http:Http){
-
   }
   getUsers(){
     return this.http.get('http://jsonplaceholder.typicode.com/users')

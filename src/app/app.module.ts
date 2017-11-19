@@ -9,6 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 import { SampleComponent } from './components/sample/sample.component';
 import { EventsFormsComponent } from './components/events-forms/events-forms.component';
 import { DataComponent } from './components/data/data.component';
+import { DetailsComponent } from './components/details/details.component'
 
 import { UserService } from './services/users/users.service';
 import { FakeUsersService } from './services/fake-users/fake-users.service';
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'examples', component: SampleComponent},
   {path: 'events', component: EventsFormsComponent},
-  {path: 'users', component: DataComponent}
+  {path: 'users', component: DataComponent},
+  {path: 'users/:id', component: DetailsComponent}
 ];
 
 @NgModule({
@@ -26,7 +28,8 @@ const routes: Routes = [
     HomeComponent,
     SampleComponent,
     EventsFormsComponent,
-    DataComponent
+    DataComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

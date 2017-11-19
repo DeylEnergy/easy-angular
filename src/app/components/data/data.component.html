@@ -15,7 +15,7 @@
 <h2>GET Request</h2>
 <ul>
   <li *ngFor="let user of bunchOfUsers">
-    <b>User:</b> {{ user.username }} ::
+    <b>User:</b> <a href="users/{{ user.id }}">{{ user.username }}</a> ::
     <b>Email:</b> {{ user.email }};
     <u (click)="editUser(user)">Edit</u>
     <u (click)="removeUser(user.id)">Delete</u>

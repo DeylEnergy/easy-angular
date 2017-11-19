@@ -1,0 +1,11 @@
+<h2>User Details</h2>
+<div id="user-info" *ngIf="userDetails">
+  <ul class="list-group">
+    <li class="list-group-item">
+      <b>Username:</b> {{ userDetails.username }}
+    </li>
+    <li class="list-group-item">
+      <b>Name:</b> {{ userDetails.name }}
+    </li>
+  </ul>
+</div>
